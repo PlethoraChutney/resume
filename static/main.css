@@ -1,0 +1,233 @@
+/* Grays
+    #f0f7f0,
+    #dddddd,
+    #c4c4c4,
+    #aaaaaa,
+    #8e8e8e,
+    #727272
+Greens
+    #585858,
+    #c9e3cb,
+    #9fd1a3,
+    #09c618,
+    #22a52c,
+    #318237
+Pinks
+    #346237,
+    #f3d4dd,
+    #eab7c6,
+    #e095ab,
+    #d56e8c,
+    #bc4c6f,
+    #9b3154    
+*/
+
+body {
+    margin: 0;
+    font-family: 'Supreme', sans-serif;
+    font-size: 14pt;
+}
+
+a:link {
+    color: #bc4c6f;
+}
+
+a:visited {
+    color: #9b3154;
+}
+
+a:active {
+    color: #22a52c;
+}
+
+#page-view {
+    height: 100vh;
+    width: 95vw;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: "header header" "sidebar resume";
+    gap: 2rem;
+}
+
+#header {
+    grid-area: header;
+}
+
+#header p {
+    margin: 0;
+}
+
+div.horiz-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#header a {
+    flex: 1;
+    text-align: center;
+}
+
+#sidebar {
+    grid-area: sidebar;
+    height: 100%;
+    width: 100%;
+    font-size: 18pt;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #9b3154 #f0f7f0;
+}
+
+#sidebar p {
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 5px;
+    color: #9b3154;
+    font-weight: bold;
+}
+
+#sidebar > p {
+    font-family: 'Chubbo', sans-serif;
+}
+
+#sidebar div.subsection {
+    margin-left: 1em;
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+#sidebar div.subsection p {
+    margin: 0 0 5px 0;
+    font-size: 12pt;
+    font-weight: normal;
+}
+
+#content {
+    grid-area: resume;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #9b3154 #f0f7f0;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Chubbo', sans-serif;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #9b3154;
+}
+
+em {
+    font-weight: bold;
+    font-style: italic;
+    color: #9b3154;
+}
+
+b {
+    color: #9b3154;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+div.section img {
+    margin: auto;
+    display: block;
+    width: 5rem;
+}
+
+hr {
+    width: 80%;
+    color: #bc4c6f;
+}
+
+.job {
+    margin-left: 2rem;
+}
+
+.job > p, .glance > p {
+    font-weight: bold;
+    color: #9b3154;
+}
+
+li::marker {
+    color: #9b3154;
+}
+
+li {
+    margin-bottom: 0.25em;
+}
+
+.position-info p {
+    margin: 0
+}
+
+#work .horiz-flex {
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.paper {
+    margin-left: 2em;
+    border-left: 1px solid #9b3154;
+    padding-left: 1em;
+    margin-bottom: 2em;
+}
+
+.paper p {
+    margin: 0;
+}
+
+/* Because I'm extra */
+.tex sub, .latex sub, .latex sup {
+    text-transform: uppercase;
+}
+
+.tex sub, .latex sub {
+    vertical-align: -0.5ex;
+    margin-left: -0.1667em;
+    margin-right: -0.125em;
+}
+
+.tex, .latex, .tex sub, .latex sub {
+    font-size: 1em;
+}
+
+.latex sup {
+    font-size: 0.85em;
+    vertical-align: 0.15em;
+    margin-left: -0.36em;
+    margin-right: -0.15em;
+}
+
+@media screen and (max-width: 800px) {
+    #page-view{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    #sidebar {
+        display: none;
+        visibility: hidden;
+    }
+
+    #education .horiz-flex p {
+        text-align: center;
+    }
+}
