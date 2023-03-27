@@ -165,6 +165,10 @@ hr {
     color: #9b3154;
 }
 
+.close-p > p {
+    margin: 0;
+}
+
 li::marker {
     color: #9b3154;
 }
@@ -229,5 +233,21 @@ li {
 
     #education .horiz-flex p {
         text-align: center;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    #work h3 {
+        width: min-content;
     }
 }
