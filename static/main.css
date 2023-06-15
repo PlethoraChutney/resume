@@ -49,11 +49,14 @@ a:active {
     grid-template-rows: max-content 1fr;
     grid-template-columns: 200px 1fr;
     grid-template-areas: "header header" "sidebar resume";
-    gap: 2rem;
+    gap: 1rem;
 }
 
 #header {
     grid-area: header;
+    padding-bottom: 10px;
+    margin-bottom: -10px;
+    border-bottom: 1px solid #9b3154;
 }
 
 #header p {
@@ -91,7 +94,7 @@ div.horiz-flex {
 }
 
 #sidebar > p {
-    font-family: 'Chubbo', sans-serif;
+    font-family: 'Sentient', serif;
 }
 
 #sidebar div.subsection {
@@ -117,7 +120,7 @@ div.horiz-flex {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Chubbo', sans-serif;
+    font-family: 'Sentient', serif;
     margin-top: 0;
     margin-bottom: 0.5rem;
     color: #9b3154;
